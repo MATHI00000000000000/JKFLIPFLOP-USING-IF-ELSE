@@ -1,4 +1,5 @@
 # JKFLIPFLOP-USING-IF-ELSE
+**Date:05/12/2025**
 
 **AIM:** 
 
@@ -37,12 +38,167 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 /* write all the steps invloved */
 
 **PROGRAM**
+```
+module jk_ff (
+    input  wire clk, rst, J, K,
+    output reg  Q
+);
+    always @(posedge clk or posedge rst) begin
+        if (rst)
+            Q <= 1'b0;        // Reset
+        else begin
+            case ({J,K})
+                2'b00: Q <= Q;        // Hold
+                2'b01: Q <= 1'b0;     // Reset
+                2'b10: Q <= 1'b1;     // Set
+                2'b11: Q <= ~Q;       // Toggle
+            endcase
+        end
+    end
+endmodule
+```
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by:Mathiyazhagan
+RegisterNumber:25018155
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
+<img width="928" height="610" alt="Screenshot 2025-12-05 210830" src="https://github.com/user-attachments/assets/cbda08c0-6b08-401f-ba3b-2a5f97f7f065" />
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![ex7 output](https://github.com/user-attachments/assets/7a563f65-f8ae-4b25-9db9-2fda18a90ccc)
+
 
 **RESULTS**
+Thus the JK flipflop using verilog and validating their functionality using their functional tables is implemented and verified.
+.
+.
+.
+
+..
+.
+.
+
+.
+.
+.
+.
+.
+
+
+
+.
+.
+.
+.
+.
+.
+
+.
+
+.
+
+.
+.
+.
+.
+.
+.
+.
+
+
+.
+.
+.
+.
+.
+.
+.
+
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+
+..
+
+..
+.
+.
+
+
+.
+.
+
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+..
+
+.
+.
+
+
+.
+..
